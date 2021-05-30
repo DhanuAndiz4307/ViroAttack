@@ -1,0 +1,49 @@
+:root {
+    --primary-gradient: linear-gradient(to bottom, #0a3546, #000000);
+    --mango-gradient: linear-gradient(to right, #ffa751, #ffe259);
+    --text-color: #f7fdfd;
+    --Montserrat: "Montserrat", cursive;
+    --Lobster: "Lobster", cursive;
+    --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+    --border-color: rgba(0, 0, 0, 0.329);
+}
+
+* {
+    font-family: var(--Montserrat);
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+section#demo {
+    background: var(--primary-gradient);
+    position: relative;
+    padding: 0;
+    min-height: 100vh;
+    transition: height 9999s;
+}
+
+.vertical-align {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+}
+
+.vertical-align h2 {
+    color: white;
+    font-family: Courgette;
+    text-align: center;
+    padding: 10px;
+    margin-top: -20px;
+    font-size: 40px;
+}
+
+.card {
+    background: #fff;
+    box-shadow: 13px 13px 28px 2px rgba(0, 0, 0, 0.035);
+    padding: 7px 15px;
+}

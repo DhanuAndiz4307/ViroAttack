@@ -1,0 +1,85 @@
+<!-- CODE EXPLAINED TUTORIALS -->
+<!-- youtube.com/CodeExplained -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main page/tracking.css' %}" />
+    <title>Viro-Attack virus Status</title>
+    <link rel="icon" href="{% static 'assets/12.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="{% static 'assets/viro1.png' %}" alt="" />
+            <!-- <p>COVID-19<br />STATS</p> -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.covid19india.org/state/KA">For your Locality</a></li>
+                <!-- <li><a href="#">ABOUT</a></li> -->
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="landing">
+            <div class="stats">
+                <div class="latest-report">
+                    <div class="country">
+                        <div class="name">Loading...</div>
+                        <div class="change-country">change</div>
+                        <div class="search-country hide">
+                            <div class="search-box">
+                                <input type="text" id="search-input" placeholder="Search Country..." />
+                                <img class="close" src="{% static 'assets/close.svg' %}" alt="" />
+                            </div>
+                            <div class="country-list"></div>
+                        </div>
+                    </div>
+                    <div class="total-cases">
+                        <div class="title">Total Cases</div>
+                        <div class="value">0</div>
+                        <div class="new-value">+0</div>
+                    </div>
+                    <div class="recovered">
+                        <div class="title">Recovered</div>
+                        <div class="value">0</div>
+                        <div class="new-value">+0</div>
+                    </div>
+                    <div class="deaths">
+                        <div class="title">Deaths</div>
+                        <div class="value">0</div>
+                        <div class="new-value">+0</div>
+                    </div>
+                </div>
+                <div class="chart">
+                    <canvas id="axes_line_chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <img src="{% static 'assets/viro1.png' %}" alt="">
+            <div class="footerlinks ">
+                <a href="{% url 'homepage' %}" class="mainlink ">Home</a>
+                <a href="{% url 'survey'%} ">Status</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="# ">Contact</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="{% static 'main page/country.js' %}"></script>
+    <script src="{% static 'main page/app.js' %}"></script>
+</body>
+
+</html>

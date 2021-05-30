@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tangerine:wght@700|Roboto+Condensed|Roboto+Slab|Beth+Ellen|Pattaya|Great+Vibes|Kaushan+Script|Pacifico|Satisfy|Courgette|Dancing+Script|Oleo+Script|Playball&display=swap" rel="stylesheet">
+    <title>About-Us</title>
+    <link rel="icon" href="{% static 'assets/12.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'main page/about.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="{% static 'assets/viro1.png' %}" alt="">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="{% url 'homepage'%}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="{% static 'assets/—Pngtree—flat modern design illustration of_5352519.png' %}" alt="" class="corona">
+            <img src="{% static 'assets/viro.png' %}" alt="" class="corona1">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="{% static 'assets/coronavirus.svg' %}" alt="">
+                    <div>
+                        <h1>Are we official?</h1>
+                        <p>No.........</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="{% static 'assets/social-distancing.svg' %}" alt="" style="margin-bottom: 200px;">
+                    <div>
+                        <h1>Who are we?</h1>
+                        <p>We are a group of dedicated volunteers who curate and verify the data coming from several sources. We extract the details, like a patient's relationship with other patients to identify local and community transmissions, travel
+                            history and status. We never collect or expose any personally identifiable data regarding the patients.</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="{% static 'assets/—Pngtree—we are all in this_5722017.png' %}" alt="">
+                    <div>
+                        <h1>What we works on?</h1>
+                        <p>It acts as a portal for the public to keep track of the latest news development <br>about the COVID-19, alongside collecting data for further analysis. All the <br>contents are handpicked, filtered, and curated by volunteers to
+                            our best <br>extent to ensure that sources are reliable</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="{% static 'assets/viro1.png' %}" alt="">
+                    <div>
+                        <h1>Our aim is too..</h1>
+                        <p>We aim to use technology and make information more accessible, <br>gather talented people all around the world to win the fight! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="{% static 'assets/up-arrow.svg' %}" alt="" id="upbtn">
+            <h3>About-US</h3>
+            <img src="{% static 'assets/down-chevron.svg' %}" alt="" id="downbtn">
+        </div>
+
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+        upbtn.onclick = function() {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downbtn.onclick = function() {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+
+</html>

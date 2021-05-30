@@ -1,0 +1,168 @@
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form role="form" action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="USERNAME">
+        <input type="text" name="email" placeholder="em">
+        <input type="text" name="password1" placeholder="pass">
+        <input type="text" name="password2" placeholder="conf pass">
+        <input type="submit" value="submit" name="submit">
+    </form>
+
+
+</body>
+
+</html>
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Login-Page</title>
+    <link rel="icon" href="{% static 'assets/12.png' %}" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tangerine:wght@700|Roboto+Condensed|Roboto+Slab|Beth+Ellen|Pattaya|Great+Vibes|Kaushan+Script|Pacifico|Satisfy|Courgette|Dancing+Script|Oleo+Script|Playball&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf8ea53283.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'signup page/css1/signup.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+    />
+</head>
+
+<body>
+    <div class="outer-rect">
+        <div class="inner-rect">
+            <div class="row">
+                <div class="column2">
+
+                    <form role="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="title">
+                            <h6>Stay Home , Stay Safe</h6>
+                            <h3>Sign-Up</h3>
+                        </div>
+                        <div class="form-inputs">
+                            <input type="text" name="username" placeholder="Username" size="27" class=" form-in1">
+                            <div class="input-icon">
+                                <i class="fas fa-hand-holding-heart"></i> </div>
+                        </div>
+                        <!-- <div cla ss="form-inputs">
+                            <input type="text" placeholder="Last Name" size="27" class=" form-in1">
+                            <div class="input-icon">
+                                <i class="fas fa-hand-holding-medical"></i> </div>
+                        </div> -->
+                        <div class="form-inputs">
+                            <input type="text" name="email" placeholder="email-id" size="27" class="form-in1">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+
+                        </div>
+                        <div class="form-inputs">
+                            <input type="password" name="password1" placeholder="New password" size="27" class="form-in1">
+                            <div class="input-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                        </div>
+                        <div class="form-inputs">
+                            <input type="password" name="password2" placeholder="confirm password" size="27 " class="form-in1 ">
+                            <div class="input-icon ">
+                                <i class="fas fa-user-lock "></i>
+                            </div>
+                        </div>
+                        <!-- <p>
+                            <input type="radio " id="test1 " name="radio-group " checked>
+                            <label for="test1 ">Apple</label>
+                        </p>
+                        <p>
+                            <input type="radio " id="test2 " name="radio-group ">
+                            <label for="test2 ">Peach</label>
+                        </p> -->
+                        <!-- <input type="button " value="submit " name="submit "> -->
+                        <button type="submit " class="btn btn-login " style="width:200px; padding: 13px; ">REGISTER</button><br><br>
+                        <a class="btn btn-login " href="{% url 'Userlogin' %} ">
+                           Sign In</a>
+                    </form>
+
+
+                    <!-- <div id="arrowAnim ">
+                                <div class="arrowSliding ">
+                                  <div class="arrow "></div>
+                                </div>
+                                <div class="arrowSliding delay1 ">
+                                  <div class="arrow "></div>
+                                </div>
+                                <div class="arrowSliding delay2 ">
+                                  <div class="arrow "></div>
+                                </div>
+                                <div class="arrowSliding delay3 ">
+                                  <div class="arrow "></div>
+                                </div>
+                              </div> -->
+
+
+                </div>
+                <div class="column ">
+                    <a href=" "><img src="{% static 'assets/1.png' %} "></a>
+                    <!-- <h1>Vir</h1> -->
+                    <div class="row1 ">
+                        <img src="{% static 'assets/viro1.png' %} " style="margin-top: -250px; ">
+                    </div>
+
+                    <div class="owl-carousel ">
+                        <img src="{% static 'assets/undraw_Access_account_re_8spm.svg' %} " alt=" " class="login-page ">
+                        <img src="{% static 'assets/undraw_authentication_fsn5.svg' %} " alt=" " class="login-page ">
+                        <img src="{% static 'assets/undraw_Fingerprint_re_uf3f.svg' %} " alt=" " class="login-page ">
+                        <img src="{% static 'assets/undraw_healthy_options_sdo3.svg' %} " alt=" " class="login-page ">
+                        <img src="{% static 'assets/undraw_medicine_b1ol.svg' %} " alt=" " class="login-page ">
+                        <img src="{% static 'assets/undraw_secure_login_pdn4.svg' %} " alt=" " class="login-page ">
+                    </div>
+                    <div class="follow ">
+                        <h4>Follow us &nbsp; <b><i class="fab fa-facebook " style="color: white;font-size: 22px; "></i>&nbsp;
+                            <i class="fab fa-twitter " style="color:white;font-size: 22px; "></i>&nbsp;
+                            <i class="fab fa-instagram " style="color: white;font-size: 22px; "></i>&nbsp;
+                            <i class="fab fa-whatsapp " style="color: white;font-size: 22px; "></i>&nbsp;</b></h4>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js " integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin=" anonymous "></script>
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                // rtl: true,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                items: 1
+
+
+            });
+        });
+    </script>
+</body>
+
+</html>

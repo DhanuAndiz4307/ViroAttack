@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main page/home.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf8ea53283.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tangerine:wght@700|Roboto+Condensed|Roboto+Slab|Beth+Ellen|Pattaya|Great+Vibes|Kaushan+Script|Pacifico|Satisfy|Courgette|Dancing+Script|Oleo+Script|Playball&display=swap" rel="stylesheet">
+    <title>Viro-Attack</title>
+    <link rel="icon" href="{% static 'assets/12.png' %}" type="image/x-icon">
+
+
+    <body>
+        <div class="wrapper">
+            <div class="nav">
+                <div class="logo">
+                    <!-- <h4 style="color: aliceblue;">Viro-Attack.</h4> -->
+                    <img src="{% static 'assets/viro1.png' %}" alt="">
+                </div>
+                <div>
+                    <p style="color: white;position: relative;left: 50px;font-weight: 500; font-size: 30px; ">Hello,{{user.username}}</p>
+                </div>
+                <div class="links">
+                    <a href="{% url 'tracking'%}" class="mainlink">Corona Update</a>
+                    <a href="{% url 'survey' %}">Status</a>
+                    <a href="{% url 'about'%}">About</a> {% if user.is_authenticated %}
+                    <a  href="{% url 'logout'%}">Logout</a> {% else %}
+                    <a href="{%url 'Userlogin'%}">Login</a> {% endif %}
+                </div>
+            </div>
+            <div class="landing">
+                <div class="landingtxt" data-aos="fade-up" data-aos-duration="1500">
+                    <h1>Stay In.<span style="color: rgb(4, 97, 121);font-size: 4vw; ">Stay Safe</span></h1>
+                    <h3>Lets all work together to put an end to this pandemic. <br> Help to Stop the spread</h3>
+                    <div class="btn ">
+                        <a href="https://www.mohfw.gov.in/">Learn More</a>
+                    </div>
+                </div>
+                <div class="landingimage " data-aos="fade-down" data-aos-duration="2000">
+                    <img src="{% static 'assets/—Pngtree—hand drawn home isolation new_5346363.png' %}" alt=" ">
+                </div>
+            </div>
+            <div class="about ">
+                <div class="abouttext " data-aos="fade-up" data-aos-duration="1000">
+                    <h1> Coronavirus<br> <span style="color: rgb(3, 85, 110);font-size: 3vw; width:50px;">What it is?...</span></h1>
+                    <img src="{% static 'assets/corona.png' %}" alt="#" />
+                </div>
+                <div class="aboutlist " data-aos="fade-left" data-aos-duration="1000">
+                    <ol>
+                        <li>
+                            <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                                <p>
+                        </li>
+                        <li>
+                            <p>Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. Older people, and those with underlying medical problems like cardiovascular
+                                disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
+                        </li>
+                        <li>
+                            <p>The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol
+                                based rub frequently and not touching your face.</p>
+                        </li>
+                        <li>
+                            <p> The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette.</p>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+
+            <div class="about ">
+                <div class="abouttext " data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Why is it important that <br> <span style="color: rgb(3, 85, 110);font-size: 3vw; ">You Stay Home</span></h1>
+                    <img src="{% static 'assets/undraw_social_distancing_2g0u.svg' %} " alt=" ">
+                </div>
+                <div class="aboutlist " data-aos="fade-left" data-aos-duration="1000">
+                    <ol>
+                        <li><span>01</span>
+                            <p>Maintain at least a 1-metre distance between yourself and others to reduce your risk of infection when they cough, sneeze or speak. Maintain an even greater distance between yourself and others when indoors. The further away,
+                                the better.
+                            </p>
+                        </li>
+                        <li><span>02</span>
+                            <p>Make wearing a mask a normal part of being around other people. The appropriate use, storage and cleaning or disposal are essential to make masks as effective as possible.</p>
+                        </li>
+                        <li><span>03</span>
+                            <p>Clean your hands before you put your mask on, as well as before and after you take it off, and after you touch it at any time.</p>
+                        </li>
+                        <li><span>04</span>
+                            <p>When you take off a mask, store it in a clean plastic bag, and every day either wash it if it’s a fabric mask, or dispose of a medical mask in a trash bin.</p>
+                        </li>
+                        <li><span>05</span>
+                            <p>Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. This eliminates germs including viruses that may be on your hands.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="infosection ">
+                <div class="infoheader " data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Things could do during the <br><span style="color: aquamarine; ">Coronavirus Quarantine.</span></h1>
+                </div>
+                <div class="infocards ">
+                    <div class="card one " data-aos="fade-up" data-aos-duration="1000">
+                        <img src="{% static 'assets/undraw_medicine_b1ol(1).svg' %} " class="cardoneimg " alt=" " data-aos="fade-up" data-aos-duration="1100">
+                        <div class="cardgone "></div>
+                        <div class="cardcontent ">
+                            <h2>Covid News</h2>
+                            <p>Landmark peak in India's Covid-19 trajectory as daily new cases drop to 18,732 after 6 months. India’s total active caseload has fallen to 2.78 lakh (2,78,690)</p>
+                            <!-- <a href="# ">
+                                <div class="cardbtn ">
+                                    <img src=" " alt=" " class="cardicon ">
+                                </div> -->
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                    <div class="card two " data-aos="fade-up" data-aos-duration="1300">
+                        <img src="{% static 'assets/undraw_medicine_b1ol(1).svg' %}" class="cardtwoimg " alt=" " data-aos="fade-up" data-aos-duration="1200">
+                        <div class="cardgone"></div>
+                        <div class="cardcontent ">
+                            <h2>Covid News</h2>
+                            <p>72.37% of the new recovered cases are observed to be concentrated in 10 states/UTs. 76.52% of the new cases are concentrated in 10 states & UTs.
+                            </p>
+                            <!-- <a href="# ">
+                                <div class="cardbtn ">
+                                    <img src=" " alt=" " class="cardicon ">
+                                </div>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="card three " data-aos="fade-up" data-aos-duration="1600">
+                        <img src="{% static 'assets/undraw_medicine_b1ol(1).svg ' %}" class="cardthreeimg " alt=" " data-aos="fade-up" data-aos-duration="1300">
+                        <div class="cardgone "></div>
+                        <div class="cardcontent ">
+                            <h2>Covid News</h2>
+                            <p>India registered 18,732 fresh cases of Covid-19, the lowest in nearly six months, while 97,61,538 people have recuperated so far
+                            </p>
+                            <!-- <a href="# ">
+                                <div class="cardbtn ">
+                                    <img src=" " alt=" " class="cardicon ">
+                                </div>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="banner ">
+                <div class="bannertxt " data-aos="fade-right" data-aos-duration="1000">
+                    <h1>Follow Us on Social Media For Regular Updates. <br> <span style="font-size: 1.6vw;font-weight: normal; " class="bannerinnertext ">Stay Updated and get all your medical needs taken care of !</span></h1>
+                    <a href="# "><i class="fab fa-facebook-f " style="color:rgb(241, 237, 237);font-size: 32px; "></i></a>&nbsp;
+                    <a href="# "><i class="fab fa-twitter " style="color:rgb(236, 229, 229);font-size: 32px; "></i>&nbsp;</a>&nbsp;
+                    <a href="# "><i class="fab fa-instagram " style="color: rgb(248, 244, 244);font-size: 32px; "></i>&nbsp;</a>&nbsp;
+                    <a href="# "><i class="fab fa-whatsapp " style="color: rgb(243, 234, 234);font-size: 32px; "></i>&nbsp;</a>&nbsp;
+                </div>
+                <div class="bannerimg " data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{% static 'assets/undraw_social_dashboard_k3pt.svg' %} " alt=" ">
+                </div>
+            </div>
+
+            <div class="footer">
+                <img src="{% static 'assets/viro.png' %}" alt="">
+                <div class="footerlinks ">
+                    <a href="{% url 'tracking'%}" class="mainlink ">Corona Updates</a>
+                    <a href="{% url 'survey'%}">Status</a>
+                    <a href="{% url 'about'%}">About</a>
+                    <!-- <a href="# ">Contact</a> -->
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+
+</html>
